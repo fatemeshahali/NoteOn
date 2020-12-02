@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "39317535197",
+    "project_id": "mnote-21222",
+    "storage_bucket": "mnote-21222.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39317535197:android:57acd1c0d4c1cd8343de34",
+        "android_client_info": {
+          "package_name": "com.shahali.mnote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39317535197-8156h914cmlp2d73g9j63021nn0pdsp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANlz5_VPfnznW50E6MQyuIh8_2gHOangE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39317535197-8156h914cmlp2d73g9j63021nn0pdsp6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
