@@ -1,13 +1,13 @@
-package com.shahali.mnote;
+package com.shahali.mnote.service;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.shahali.mnote.R;
 
 public class HomeActivity extends AppCompatActivity {
     private FloatingActionButton addNote;

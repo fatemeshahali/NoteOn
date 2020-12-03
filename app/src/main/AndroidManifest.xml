@@ -10,8 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Note">
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".service.RegisterActivity"></activity>
+        <activity android:name=".service.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,12 +19,12 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".service.MainActivity">
         </activity>
-        <activity android:name=".HomeActivity"
+        <activity android:name=".service.HomeActivity"
             tools:ignore="DuplicateActivity">
         </activity>
-        <activity android:name=".CreateNoteActivity"/>
+        <activity android:name=".service.CreateNoteActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

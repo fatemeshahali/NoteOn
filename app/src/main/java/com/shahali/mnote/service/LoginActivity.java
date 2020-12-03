@@ -1,4 +1,4 @@
-package com.shahali.mnote;
+package com.shahali.mnote.service;
 
 import android.content.Intent;
 import android.os.Build;
@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.shahali.mnote.R;
 
 
 public class LoginActivity extends AppCompatActivity {
