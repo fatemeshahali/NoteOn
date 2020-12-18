@@ -19,7 +19,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.shahali.mnote.R;
 
-import java.util.Date;
 import java.util.HashMap;
 
 public class CreateNoteActivity extends AppCompatActivity {
@@ -66,16 +65,16 @@ public class CreateNoteActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String txtTitle = title.getText().toString().trim();
                 String txtNote = note.getText().toString().trim();
-                Date creationDate = new Date();
                 Boolean flag = validationFields(txtNote, txtTitle);
                 if (flag) {
-                    saveNote(txtTitle, txtNote, creationDate);
+                    saveNote(txtTitle, txtNote);
                 }
             }
         })
     ;}
 
-    private void saveNote(String txtTitle, String txtNote, Date creationDate) {
+
+    private void saveNote(String txtTitle, String txtNote) {
         pd.setMessage("Please Wait");
         pd.show();
         mRootRef = mRootRef.child("Note");
@@ -83,7 +82,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         HashMap<String, Object> mapNote = new HashMap<>();
         mapNote.put("title", txtTitle);
         mapNote.put("note", txtNote);
-        mapNote.put("creation_date", creationDate);
+        mapNote.put("creation_date", System.currentTimeMillis());
         mapNote.put("publisher", mAuth.getCurrentUser().getUid());
         mRootRef.push().setValue(mapNote).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
