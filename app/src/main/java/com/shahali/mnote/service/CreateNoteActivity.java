@@ -78,13 +78,13 @@ public class CreateNoteActivity extends AppCompatActivity {
         pd.setMessage("Please Wait");
         pd.show();
         mRootRef = mRootRef.child("Note");
+        String noteId = mRootRef.push().getKey();
 
         HashMap<String, Object> mapNote = new HashMap<>();
         mapNote.put("title", txtTitle);
         mapNote.put("note", txtNote);
         mapNote.put("creation_date", System.currentTimeMillis());
-        mapNote.put("publisher", mAuth.getCurrentUser().getUid());
-        mRootRef.push().setValue(mapNote).addOnCompleteListener(new OnCompleteListener<Void>() {
+        mRootRef.child(mAuth.getCurrentUser().getUid()).child(noteId).setValue(mapNote).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {

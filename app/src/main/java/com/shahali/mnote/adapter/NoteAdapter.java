@@ -36,6 +36,14 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     public interface OnRecyclerItemClickDelete {
         void onClickDelete(Note note, int pos);}
 
+    public void setOnRecyclerItemClick(OnRecyclerItemClick onRecyclerItemClick) {
+        this.onRecyclerItemClick = onRecyclerItemClick;
+    }
+
+    public void setOnRecyclerItemClickDelete(OnRecyclerItemClickDelete OnRecyclerItemClickDelete) {
+        this.OnRecyclerItemClickDelete = OnRecyclerItemClickDelete;
+    }
+
     @NonNull
     @Override
     public NoteAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
