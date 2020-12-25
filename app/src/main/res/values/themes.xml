@@ -20,6 +20,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
     <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
 
     <!--styles for app-->

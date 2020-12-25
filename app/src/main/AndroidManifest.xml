@@ -8,21 +8,25 @@
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/Theme.Note">
-        <activity android:name=".service.UpdateActivity"></activity>
-        <activity android:name=".service.RegisterActivity" />
-        <activity android:name=".service.LoginActivity">
+        <activity android:name=".service.SplashScreen"
+            android:theme="@style/Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".service.MainActivity"></activity>
+        <activity android:name=".service.UpdateActivity" />
+        <activity android:name=".service.RegisterActivity" />
+        <activity android:name=".service.LoginActivity">
+
+        </activity>
+        <activity android:name=".service.MainActivity" />
         <activity
             android:name=".service.HomeActivity"
-            tools:ignore="DuplicateActivity"></activity>
+            tools:ignore="DuplicateActivity" />
         <activity android:name=".service.CreateNoteActivity" />
 
         <meta-data

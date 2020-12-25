@@ -10,6 +10,12 @@
     app:cardCornerRadius="10dp">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -18,73 +24,78 @@
 
             <TextView
                 android:id="@+id/tvDelete"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_below="@id/title"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/ic_delete_black_24dp" />
+                android:background="@drawable/ic_delete_black_24dp"
+                tools:ignore="NotSibling" />
 
             <TextView
                 android:id="@+id/tvEdit"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_toEndOf="@id/tvDelete"
                 android:layout_toRightOf="@id/tvDelete"
-                android:background="@drawable/ic_edit_black_24dp" />
+                android:layout_below="@id/title"
+                android:background="@drawable/ic_edit_black_24dp"
+                tools:ignore="NotSibling" />
         </RelativeLayout>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
+            android:fontFamily="@font/roboto_slab_light"
+            android:text="عنوان یادداشت"
+            android:textAlignment="inherit"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="-1dp"
+            tools:layout_editor_absoluteY="175dp" />
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_slab_light"
-                android:text="عنوان یادداشت"
-                android:textAlignment="textStart"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="24sp"
-                tools:layout_editor_absoluteX="-1dp"
-                tools:layout_editor_absoluteY="175dp" />
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:fontFamily="@font/roboto_slab_light"
+            android:lines="100"
+            android:text="متن یادداشت"
+            android:textAlignment="textStart"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08" />
 
-            <TextView
-                android:id="@+id/note"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:fontFamily="@font/roboto_slab_light"
-                android:lines="100"
-                android:text="متن یادداشت"
-                android:textAlignment="textStart"
-                android:textColor="@color/purple_500"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.9"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.08" />
-
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_slab_light"
-                android:text="تاریخ"
-                android:textAlignment="viewStart"
-                android:textColor="@color/purple_200"
-                tools:layout_editor_absoluteX="149dp"
-                tools:layout_editor_absoluteY="145dp" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_slab_light"
+            android:text="تاریخ"
+            android:textAlignment="viewStart"
+            android:textColor="@color/purple_200"
+            tools:layout_editor_absoluteX="149dp"
+            tools:layout_editor_absoluteY="145dp" />
 
 
-        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
 </com.google.android.material.card.MaterialCardView>
